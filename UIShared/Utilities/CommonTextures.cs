@@ -91,6 +91,7 @@ namespace ModsCommon.Utilities
         public static string RadioChecked { get; } = nameof(RadioChecked);
         public static string RadioUnchecked { get; } = nameof(RadioUnchecked);
 
+        [Obsolete]
         static CommonTextures()
         {
             var spriteParams = new Dictionary<string, RectOffset>();

@@ -110,6 +110,7 @@ namespace ModsCommon.UI
         public override string ToString() => Value.ToString();
         public static implicit operator TypeValue(UITextField<TypeValue> field) => field.Value;
 
+        [Obsolete]
         public void SetDefaultStyle()
         {
             this.DefaultStyle();

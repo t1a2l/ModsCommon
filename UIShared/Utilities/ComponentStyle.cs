@@ -145,6 +145,7 @@ namespace ModsCommon.UI
 
         #region DROPDOWN
 
+        [Obsolete]
         public static void DropDownDefaultStyle<ObjectType, PopupType, EntityType>(this SelectItemDropDown<ObjectType, EntityType, PopupType> dropDown, Vector2? size = null)
             where PopupType : CustomUIPanel, IPopup<ObjectType, EntityType>
             where EntityType : CustomUIButton, IPopupEntity<ObjectType>
@@ -161,18 +162,18 @@ namespace ModsCommon.UI
 
             dropDown.size = size ?? new Vector2(230, 20);
         }
+
         public static void PopupDefaultStyle<ObjectType, EntityType>(this ObjectPopup<ObjectType, EntityType> popup, float? entityHeight = null)
             where EntityType : CustomUIButton, IPopupEntity<ObjectType>, IReusable
         {
-            popup.PopupStyle = Default.DropDown;
-
             popup.EntityHeight = entityHeight ?? 20f;
             popup.MaximumSize = new Vector2(230f, 700f);
         }
+
         public static void EntityDefaultStyle<ObjectType, EntityType>(this EntityType entity)
             where EntityType : CustomUIButton, IPopupEntity<ObjectType>
         {
-            entity.EntityStyle = Default.DropDown;
+
         }
 
 
@@ -253,6 +254,7 @@ namespace ModsCommon.UI
         public static Color32 FieldFocusedColor => new Color32(151, 202, 222, 255);
         public static Color32 FieldDisabledFocusedColor => new Color32(113, 151, 166, 255);
 
+        [Obsolete]
         public static void DefaultStyle(this CustomUITextField textField)
         {
             textField.TextFieldStyle = Default.TextField;
@@ -317,6 +319,7 @@ namespace ModsCommon.UI
 
         #region TOGGLE
 
+        [Obsolete]
         public static void DefaultStyle(this CustomUIToggle toggle)
         {
             toggle.ToggleStyle = Default.Toggle;
@@ -407,6 +410,7 @@ namespace ModsCommon.UI
         #endregion
 
 
+        [Obsolete]
         public static ControlStyle Default { get; } = new ControlStyle()
         {
             TextField = new TextFieldStyle()

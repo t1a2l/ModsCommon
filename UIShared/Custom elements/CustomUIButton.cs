@@ -275,7 +275,7 @@ namespace ModsCommon.UI
 
 
         private AutoSize _autoSize;
-        [Obsolete]
+
         public override bool autoSize
         {
             get => AutoSize == AutoSize.All;

@@ -19,12 +19,12 @@ namespace ModsCommon.UI
 
         private new TypeValue minValue;
         private new TypeValue maxValue;
-        public TypeValue Value
+        public new TypeValue Value
         {
             get => GetValue(rawValue);
             set => ValueChanged(value, false);
         }
-        public TypeValue MinValue
+        public new TypeValue MinValue
         {
             get => minValue;
             set
@@ -34,7 +34,7 @@ namespace ModsCommon.UI
                 Value = oldValue;
             }
         }
-        public TypeValue MaxValue
+        public new TypeValue MaxValue
         {
             get => maxValue;
             set

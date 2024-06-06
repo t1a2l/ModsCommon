@@ -160,6 +160,7 @@ namespace ModsCommon.Utilities
                     WatcherState.Missing => CommonLocalize.Dependency_Missing,
                     WatcherState.Conflict => CommonLocalize.Dependency_Conflict,
                     WatcherState.All => CommonLocalize.Dependency_MissingAndConflict,
+                    _ => throw new NotImplementedException(),
                 };
 
                 MessageBox.MessageText = $"{text}\n{string.Format(CommonLocalize.Dependency_NeedFix, ModInstance.NameRaw)}";

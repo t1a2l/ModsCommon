@@ -57,6 +57,7 @@ namespace ModsCommon.UI
         public virtual void AddItem(ValueType item, string label) => AddItem(new DropDownItem<ValueType>(item, (OptionData)label));
         public virtual void AddItem(ValueType item, OptionData optionData) => AddItem(new DropDownItem<ValueType>(item, optionData));
         protected override void SelectObjectEvent(DropDownItem<ValueType> item) => OnSelectObject?.Invoke(item.value);
+
         protected override void SetPopupStyle()
         {
             Popup.PopupDefaultStyle();
@@ -80,6 +81,7 @@ namespace ModsCommon.UI
             entityTextScale = 0.7f;
         }
 
+        [Obsolete]
         public void SetDefaultStyle(Vector2? size = null)
         {
             this.DropDownDefaultStyle(size);
@@ -138,6 +140,7 @@ namespace ModsCommon.UI
         where EntityType : SimpleEntity<ValueType>
     {
         public float EntityTextScale { get; set; } = 0.7f;
+
         protected override void SetEntityStyle(EntityType entity)
         {
             entity.EntityDefaultStyle<DropDownItem<ValueType>, EntityType>();

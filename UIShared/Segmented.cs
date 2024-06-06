@@ -107,7 +107,10 @@ namespace ModsCommon.UI
             autoChildrenVertically = AutoLayoutChildren.Fit;
         }
 
+        [Obsolete]
         public void AddItem(ValueType item, OptionData optionData) => AddItem(item, optionData, true, null);
+
+        [Obsolete]
         public void AddItem(ValueType item, OptionData optionData, bool? clickable = true, float? width = null)
         {
             Objects.Add(item);
@@ -190,6 +193,8 @@ namespace ModsCommon.UI
                     button.Type = SegmentedButtonType.Middle;
             }
         }
+
+        [Obsolete]
         protected void SetStyle(CustomUISegmentedButton button)
         {
             if (SegmentedStyle == null)
@@ -266,6 +271,8 @@ namespace ModsCommon.UI
 
 
         private SegmentedStyle style;
+
+        [Obsolete]
         public SegmentedStyle SegmentedStyle
         {
             private get => style ?? ComponentStyle.Default.Segmented;

@@ -90,6 +90,7 @@ namespace ModsCommon.UI
             }
         }
 
+        [Obsolete]
         public ColorPickerPopup()
         {
             builtinKeyNavigation = true;
@@ -110,6 +111,8 @@ namespace ModsCommon.UI
                 FillPopup();
             });
         }
+
+        [Obsolete]
         protected virtual void FillPopup()
         {
             var pickerPanel = AddUIComponent<CustomUIPanel>();
@@ -255,6 +258,8 @@ namespace ModsCommon.UI
                 valuePanel.SetItemMargin(HEXField.parent, new RectOffset(10, 0, 0, 0));
             });
         }
+
+        [Obsolete]
         private FieldType AddField<ValueType, FieldType>(UIComponent parent, string name, Action<ValueType> onChanged)
             where FieldType : UITextField<ValueType>
         {
